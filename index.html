@@ -95,7 +95,7 @@
             align-items: center;
             padding-bottom: 24px;
             border-bottom: 1px solid var(--border-glass);
-            margin-bottom: 70px;
+            margin-bottom: 60px;
             backdrop-filter: blur(12px);
         }
 
@@ -106,20 +106,32 @@
             text-transform: uppercase;
         }
 
-        .tag {
+        .social-nav {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-btn {
             font-size: 0.75rem;
-            letter-spacing: 0.12em;
-            color: var(--text-sub);
+            letter-spacing: 0.1em;
+            color: var(--text-pure);
             border: 1px solid var(--border-glass);
-            padding: 6px 16px;
+            padding: 6px 14px;
             border-radius: 40px;
             background: var(--accent-glow);
+            text-decoration: none;
             text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .social-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: #FFF;
         }
 
         /* --- HERO --- */
         .hero {
-            margin-bottom: 80px;
+            margin-bottom: 50px;
             max-width: 800px;
         }
 
@@ -148,6 +160,69 @@
             line-height: 1.6;
             max-width: 640px;
             text-shadow: 0 4px 15px rgba(0,0,0,0.7);
+        }
+
+        /* --- BARRA DE BÚSQUEDA / PREGUNTAS FRECUENTES EN EL CENTRO --- */
+        .faq-search-section {
+            background: var(--card-glass);
+            border: 1px solid var(--border-glass);
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 60px;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .faq-search-section h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            letter-spacing: -0.01em;
+        }
+
+        .search-bar-wrapper {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .search-input {
+            flex: 1;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--border-glass);
+            padding: 14px 20px;
+            border-radius: 12px;
+            color: #FFF;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .search-input:focus {
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .faq-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .chip {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-glass);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--text-sub);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .chip:hover {
+            background: rgba(255, 255, 255, 0.15);
+            color: #FFF;
         }
 
         /* --- TARJETAS & GRILLA --- */
@@ -275,13 +350,30 @@
     <div class="wrapper">
         <nav>
             <div class="logo">MELANY MÉNDEZ</div>
-            <div class="tag">DIRECTORA DE FOTOGRAFÍA & EDITOR</div>
+            <div class="social-nav">
+                <a href="https://instagram.com/tuusuario" target="_blank" class="social-btn">Instagram</a>
+                <a href="https://wa.me/tu_numero" target="_blank" class="social-btn">WhatsApp</a>
+            </div>
         </nav>
 
         <section class="hero animate-hero">
             <div class="hero-subtitle">PORTAFOLIO AUDIOVISUAL</div>
             <h1>Capturando narrativa visual con precisión cinematográfica.</h1>
             <p>Especializada en dirección de cámara, composición estética y postproducción de alto impacto visual.</p>
+        </section>
+
+        <!-- BARRA DE BÚSQUEDA Y PREGUNTAS FRECUENTES CENTRAL -->
+        <section class="faq-search-section animate-hero">
+            <h3>¿Tienes dudas sobre mis servicios o cotizaciones?</h3>
+            <div class="search-bar-wrapper">
+                <input type="text" class="search-input" placeholder="Pregunta algo (ej. ¿Cuál es tu tarifa?, ¿Haces rodajes fuera de Caracas?)...">
+            </div>
+            <div class="faq-chips">
+                <span class="chip">¿Cómo contratar servicios?</span>
+                <span class="chip">Equipos que utilizo</span>
+                <span class="chip">Disponibilidad para viajes</span>
+                <span class="chip">Tiempos de entrega</span>
+            </div>
         </section>
 
         <section class="grid animate-grid">
@@ -324,7 +416,7 @@
 
         <footer>
             <div>© 2026 Melany Méndez — Caracas, Venezuela</div>
-            <a href="mailto:contacto@ejemplo.com" class="contact-btn">Iniciar Proyecto</a>
+            <a href="https://wa.me/tu_numero" target="_blank" class="contact-btn">Escribir por WhatsApp</a>
         </footer>
     </div>
 
